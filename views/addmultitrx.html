@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Dashboard - FT DMT </title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./static/banklogo02.png"/>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="./static/libs/slick/slick.css" type="text/css">
+
+    <!-- Main style file -->
+    <link rel="stylesheet" href="./static/css/app.css" type="text/css">
+</head>
+<body>
+<!-- preloader -->
+<div class="preloader">
+    <img src="./static/logobank01.png" alt="logo">
+    <div class="preloader-icon"></div>
+</div>
+<!-- ./ preloader -->
+
+<!-- menu -->
+<div class="menu">
+    <div class="menu-header">
+        <a href="/" class="menu-header-logo">
+            <img src="./static/logobank01.png" alt="logo">
+            <span>FT DMT</span>
+        </a>
+        <a href="#" class="btn btn-sm menu-close-btn">
+            <i class="bi bi-x"></i>
+        </a>
+    </div>
+    <div class="menu-body">
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
+                <div class="avatar me-3">
+                    <!-- <img src="./static/images/user/man_avatar5.jpg" -->
+                    <img src="./static/logo_icon.png"
+                    class="rounded-circle" alt="image">
+                </div>
+                <div>
+                    <div class="fw-bold">Hi ....</div>
+                    <small class="text-muted">{{ .nama_lengkap }}</small>
+                </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <i class="bi bi-person dropdown-item-icon"></i> Profile
+                </a>
+
+                <a href="/logout" class="dropdown-item d-flex align-items-center text-danger" >
+                    <i class="bi bi-box-arrow-right dropdown-item-icon" href="/logout" role="button"></i> Logout
+                </a>
+            </div>
+        </div>
+        <ul>
+            <li class="menu-divider">Dashboard</li>
+            <li>
+                <a  class="active" href="./dashboard.html">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-receipt"></i>
+                    </span>
+                    <span>Data Transaksi</span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="/listtrx">List</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-wallet"></i>
+                    </span>
+                    <span>Tools Transaksi</span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="/addmultitrx">Multi Transfer</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- ./  menu -->
+
+<!-- layout-wrapper -->
+<div class="layout-wrapper">
+
+    <!-- header -->
+    <div class="header">
+    <div class="menu-toggle-btn"> <!-- Menu close button for mobile devices -->
+        <a href="#">
+            <i class="bi bi-list"></i>
+        </a>
+    </div>
+    <!-- Logo -->
+    <a href="./dashboard.html" class="logo">
+        <img width="100" src="./static/banklogo01.png" alt="logo">
+    </a>
+    <!-- ./ Logo -->
+    <div class="page-title">Dashboard</div>
+    <!-- <form class="search-form">
+        <div class="input-group">
+            <button class="btn btn-outline-light" type="button" id="button-addon1">
+                <i class="bi bi-search"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="Search..."
+                   aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <a href="#" class="btn btn-outline-light close-header-search-bar">
+                <i class="bi bi-x"></i>
+            </a>
+        </div>
+    </form> -->
+
+</div>
+    <!-- ./ header -->
+
+
+    <!-- content -->
+    <div class="content align-items-center content d-flex justify-content-center text-center flex-column">
+        
+    <p>INI MASUKKAN DATA UPLOAD CUY</p>>
+    
+    </div>
+    <!-- ./ content -->
+
+    <!-- content-footer -->
+    <footer class="content-footer">
+        <div> © 2024</div>
+        <div>
+            <!-- <nav class="nav gap-4">
+                <a href="https://themeforest.net/licenses/standard" class="nav-link">Licenses</a>
+                <a href="#" class="nav-link">Change Log</a>
+                <a href="#" class="nav-link">Get Help</a>
+            </nav> -->
+        </div>
+    </footer>
+    <!-- ./ content-footer -->
+
+</div>
+<!-- ./ layout-wrapper -->
+
+<!-- JQuery -->
+<script src="./static/libs/jquery-3.7.1.min.js"></script>
+
+<!-- Nicescroll -->
+<script src="./static/libs/nicescroll.js"></script>
+
+<!-- Apex chart -->
+<script src="./static/libs/charts/apex/apexcharts.min.js"></script>
+
+<!-- Slick -->
+<script src="./static/libs/slick/slick.min.js"></script>
+
+<!-- Examples -->
+<script src="./static/js/examples/dashboard.js"></script>
+
+<!-- Main Javascript file -->
+<script src="./static/js/app.js"></script>
+</body>
+</html>

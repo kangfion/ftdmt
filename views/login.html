@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login - FT DMT</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./static/ftdmt.png"/>
+
+    <!-- Main style file -->
+    <link rel="stylesheet" href="./static/css/app.css" type="text/css"/>
+</head>
+<body class="auth">
+
+<!-- begin::preloader-->
+<div class="preloader">
+    <div class="preloader-icon"></div>
+</div>
+<!-- end::preloader -->
+
+
+    <div class="form-wrapper">
+        <div class="container">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="d-block d-lg-none text-center text-lg-start">
+                                    <img width="60" src="./static/ftdmt02.png" alt="logo">
+                                </div>
+                                <div class="my-5 text-center text-lg-start">
+                                    <h1 class="display-8">Sign In</h1>
+                                    <p class="text-muted">Sign in to ft dmt dashboard to continue</p>
+                                    {{ if .error }}
+                                    <div class="alert alert-danger">
+                                        {{ .error }}
+                                    </div>
+                                {{ end }}
+                                </div>
+                                <form action="/login" method="post" class="mb-5">
+                                    <div class="mb-3">
+                                        <input type="text" name="username" class="form-control {{ if .validation.Username }} is-invalid {{ end }}" class="form-control" placeholder="Enter email" autofocus
+                                               required>
+                                               <div class="invalid-feedback">
+                                                {{ .validation.Username }}
+                                            </div>     
+                                    </div>
+                                    <div class="mb-3">
+                                        <input  type="password" name="password" class="form-control {{ if .validation.Password }} is-invalid {{ end }}"  class="form-control" placeholder="Enter password"
+                                               required>
+                                               <div class="invalid-feedback">
+                                                {{ .validation.Password }}
+                                            </div>
+                                    </div>
+                                    <div class="text-center text-lg-start">
+                                        <!-- <p class="small">Can't access your account? <a href="#">Reset your password now</a>.</p> -->
+                                        <button type="submit" class="btn btn-primary">Sign In</button>
+                                    </div>
+                                </form>
+                                <!-- <p class="text-center d-block d-lg-none mt-5 mt-lg-0">
+                                    Don't have an account? <a href="#">Sign up</a>.
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-flex border-start align-items-center justify-content-between flex-column text-center">
+                        <div class="logo">
+                            <img width="60" src="./static/ftdmt.png" alt="logo">
+                        </div>
+                        <div>
+                            <h3 class="fw-bold">Welcome to Web FT DMT</h3>
+                            <!-- <p class="lead my-5">If you don't have an account, would you like to register right now?</p>
+                            <a href="#" class="btn btn-primary">Sign Up</a> -->
+                        </div>
+                        <div class="logo">
+                            <img width="125" src="./static/ftdmt02.png" alt="logo">
+                        </div>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">Terms & Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- JQuery -->
+<script src="./static/libs/jquery-3.7.1.min.js"></script>
+
+<!-- Main Javascript file -->
+<script src="./static/js/app.js"></script>
+</body>
+</html>
